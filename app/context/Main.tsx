@@ -30,7 +30,6 @@ export function MainCtxProvider({ children }: React.PropsWithChildren<{}>) {
     const response = await fetch(
       "https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=name&orderBy=DESC"
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000000));
     const data = await response.json();
     return data;
   };
